@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <style type="text/css">
+        .back {
+            width: 100%;
+            height: 100%;
+            background-image: url("{{ url_for('static', filename='background/login.jpg') }}");
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body class="back">
+<div align="center">
+    <form action="/sign_in" method="post">
+        <h1>登录界面</h1>
+        <h1>{{ err }}</h1>
+        姓名：<input type="text" name="uname"><br>
+        密码：<input type="password" name="pwd"><br>
+        <input type="submit" value="提交">
+    </form>
+    <h1>{{ content }}</h1>
+    <video id="my-video" controls preload="auto" width="400" height="300"
+   data-setup="{}">
+    <source src="{{ url_for('static', filename='video/【游民星空】饭制战地1风格的战地5宣传片_高清.mp4') }}" type='video/mp4'>
+  </video>
+</div>
+</body>
+</html>
